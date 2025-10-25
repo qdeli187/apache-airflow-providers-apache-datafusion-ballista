@@ -47,3 +47,7 @@ Test your dag locally
 python /path/to/dag.py
 ```
 
+## 🙃 But Why though ?
+
+I personnaly believe rust is much more fit than java in a kubernetes ecosystem. I am very interested in being able to rely on rust based tools for etls. Having a smooth experience with airflow , datafusion and ballista might give more audience to this stack, which I believe could be a net positive for users on kubernetes.
+
