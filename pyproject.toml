@@ -1,0 +1,20 @@
+[project]
+name = "apache-airflow-providers-apache-datafusion-ballista"
+version = "0.1.0"
+description = "🍃 Run Apache Datafusion Ballista workflows within Airflow"
+authors = [
+    {name = "qdeli187"}
+]
+license = {text = "Apache 2.0"}
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "apache-airflow>=3.0.0",
+]
+packages = [
+    { include = "src" }
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
