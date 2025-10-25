@@ -1,27 +1,23 @@
-# apache-airflow-providers-apache-datafusion-ballista
+# Datafusion Ballista Airflow Provider
 🍃 Run Apache Datafusion Ballista workflows within Airflow 
 
 ## ⚠️ Disclamer
 
-This project is not ready yet ! for a functionnable version for local ballista workflow we need to wait for airflow 3.1.1 (waiting for this [PR](https://github.com/apache/airflow/pull/56660) to go live and test it)
+Ballista's python bindings seems to be going through a rough patch while the overall project seems to take a new turn for the better (having ballista as more of an engine extension to datafusion) This repo aims to work on having a nice airflow integration where devs can create a ballista connection and use the decorator similarly as they would with the apache spark decorator (with the same caveheat).
+
+It might take some time for datafusion and ballista to have the synergy they hope so this repo will be on the starting block waiting for the amazing results to come afloat !  As you might have guessed this here is a very naive and blunt implementation of an airflow provider that only allows a single local worker (ie airflow worker = ballista standalone instance). When the bindings are stable and the "fusion" with datafusion is complete i will return here to work on 
+
+**Do not try to use it in production**
 
 ## ✨ Features
 
-- [ ] Local Executor
+- [x] Local Executor
 - [ ] Ballista Connection
 - [ ] Remote Execution
 
 ## 🕹️ Usage
 
-> Not ready yet and subject to change (no installable version but you can clone this repo and create a dag)
-
-add this dependency to your airflow instance
-
-```bash
-pip install apache-airflow-providers-apache-datafusion-ballista
-```
-
-Create a Dag
+Clone this repo and create a dag like the one below. At this stage we will not make a python package as it is a very dirty and naive implementation. Still you can play with the idea and see where it goes !
 
 ```python
 from src.decorators.ballista import ballista_task
